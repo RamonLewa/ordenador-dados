@@ -1,0 +1,17 @@
+bin/
+obj/
+
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+.vs/
+.vscode/
+
+*.log
+
+*.db
+*.sqlite
+
+.env
