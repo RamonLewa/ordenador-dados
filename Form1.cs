@@ -44,7 +44,7 @@ namespace ordenador_dados
         private void MostrarResultado(int[] vetor, Stopwatch sw)
         {
             txtResultado.Text = string.Join(", ", vetor);
-            lblTempo.Text = $"Tempo: {sw.ElapsedMilliseconds} ms";
+            lblTempo.Text = $"{sw.ElapsedMilliseconds} ms";
         }
 
         private int[] GerarItens(int quantidade)
@@ -257,6 +257,11 @@ namespace ordenador_dados
 
                 start++;
             }
+        }
+
+        private void FOrdenador_Load(object sender, EventArgs e)
+        {
+            lblTempo.Text = string.Empty;
         }
     }
 }
