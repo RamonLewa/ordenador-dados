@@ -58,15 +58,6 @@ namespace ordenador_dados
             return itens;
         }
 
-        private bool IsSorted(int[] arr)
-        {
-            for (int i = 1; i < arr.Length; i++)
-                if (arr[i - 1] > arr[i])
-                    return false;
-
-            return true;
-        }
-
         private void Shuffle(int[] arr, Random rand)
         {
             for (int i = arr.Length - 1; i > 0; i--)
@@ -78,7 +69,8 @@ namespace ordenador_dados
 
         private void btnBubbleSort_Click(object sender, EventArgs e)
         {
-            if (!ValidarEntrada(out int qtd)) return;
+            if (!ValidarEntrada(out int qtd)) 
+                return;
 
             int[] vetor = GerarItens(qtd);
 
@@ -99,7 +91,8 @@ namespace ordenador_dados
 
         private void btnSelectionSort_Click(object sender, EventArgs e)
         {
-            if (!ValidarEntrada(out int qtd)) return;
+            if (!ValidarEntrada(out int qtd)) 
+                return;
 
             int[] vetor = GerarItens(qtd);
 
@@ -126,7 +119,8 @@ namespace ordenador_dados
 
         private void btnInsertionSort_Click(object sender, EventArgs e)
         {
-            if (!ValidarEntrada(out int qtd)) return;
+            if (!ValidarEntrada(out int qtd)) 
+                return;
 
             int[] vetor = GerarItens(qtd);
 
@@ -156,7 +150,8 @@ namespace ordenador_dados
 
         private void btnQuickSort_Click(object sender, EventArgs e)
         {
-            if (!ValidarEntrada(out int qtd)) return;
+            if (!ValidarEntrada(out int qtd)) 
+                return;
 
             int[] vetor = GerarItens(qtd);
 
@@ -169,7 +164,8 @@ namespace ordenador_dados
 
         private void QuickSort(int[] arr, int left, int right)
         {
-            if (left >= right) return;
+            if (left >= right) 
+                return;
 
             int pivot = arr[(left + right) / 2];
             int i = left, j = right;
@@ -192,7 +188,8 @@ namespace ordenador_dados
 
         private void btnBogoSort_Click(object sender, EventArgs e)
         {
-            if (!ValidarEntrada(out int qtd)) return;
+            if (!ValidarEntrada(out int qtd)) 
+                return;
 
             int[] vetor = GerarItens(qtd);
 
@@ -213,9 +210,19 @@ namespace ordenador_dados
             return arr;
         }
 
+        private bool IsSorted(int[] arr)
+        {
+            for (int i = 1; i < arr.Length; i++)
+                if (arr[i - 1] > arr[i])
+                    return false;
+
+            return true;
+        }
+
         private void btnCocktailSort_Click(object sender, EventArgs e)
         {
-            if (!ValidarEntrada(out int qtd)) return;
+            if (!ValidarEntrada(out int qtd)) 
+                return;
 
             int[] vetor = GerarItens(qtd);
 
@@ -243,7 +250,8 @@ namespace ordenador_dados
                         swapped = true;
                     }
 
-                if (!swapped) break;
+                if (!swapped) 
+                    break;
 
                 swapped = false;
                 end--;
